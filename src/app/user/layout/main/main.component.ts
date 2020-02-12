@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
+// import '../../../../../node_modules/jquery/dist/jquery.min.js'
+// import "../../../../assets/user-custom/js/vendor/jquery-3.1.1.min.js";
+// import "../../../../assets/user-custom/js/popper.min.js";
+// import "../../../../assets/user-custom/js/bootstrap.min.js";
+// import "../../../../assets/user-custom/lib/js/jquery.nivo.slider.js";
+// import "../../../../assets/user-custom/js/plugins.js";
+// import "../../../../assets/user-custom/js/main.js";
+
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss',
-    '../../anymore/lib/css/nivo-slider.css',
-    '../../anymore/css/core.css',
-    '../../anymore/css/shortcode/header.css',
-    '../../anymore/css/shortcode/footer.css',
-    '../../anymore/css/shortcode/slider.css',
-    '../../anymore/style.css',
-    '../../anymore/css/responsive.css',
-    '../../anymore/css/custom.css',
-    '../../anymore/css/style-customizer.css'
+ 
   ]
   
 })
 export class MainComponent implements OnInit {
-
+ 
   constructor() { }
-
   ngOnInit() {
   }
 

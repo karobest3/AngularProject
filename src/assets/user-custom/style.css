@@ -244,7 +244,7 @@
   position: relative;
 }
 .banner-1::before {
-  background: rgba(0, 0, 0, 0) url("/Angular-Project/src/assets/img/bg/ribbon.png") repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("img/bg/ribbon.png") repeat scroll 0 0;
   content: "";
   height: 137px;
   left: -11px;
@@ -716,7 +716,7 @@ transform: scale(1);
 ------------------------------------- */
 .breadcrumbs-section {}
 .breadcrumbs {
-  background: #f6f6f6 url("/Angular-Project/src/assets/img/breadcrumb/1.png") no-repeat scroll center center; 
+  background: #f6f6f6 url("img/breadcrumb/1.png") no-repeat scroll center center; 
 }
 .overlay-bg { 
   position: relative;
@@ -1347,7 +1347,7 @@ table {width: 100%}
   appearance: none;
 }
 .custom-select {
-  background: rgba(0, 0, 0, 0) url("/Angular-Project/src/assets/img/icon/down-arrow.png") no-repeat scroll 97% center;
+  background: rgba(0, 0, 0, 0) url("img/icon/down-arrow.png") no-repeat scroll 97% center;
   border: medium none;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   height: 40px;
@@ -1490,7 +1490,7 @@ table {width: 100%}
   position: relative;
 }
 .bg-img-1 {
-  background: rgba(255, 255, 255, 0.5) url("/Angular-Project/src/assets/img/bg/blog-photo-bg.png") repeat scroll 0 0;
+  background: rgba(255, 255, 255, 0.5) url("img/bg/blog-photo-bg.png") repeat scroll 0 0;
 }
 .blog-details-photo > img {
   width: 100%;
@@ -1789,7 +1789,7 @@ table {width: 100%}
   17. Dotted-overlay
 ------------------------------------- */
 .dotted-overlay::after {
-  background: rgba(0, 0, 0, 0) url("/Angular-Project/src/assets/img/bg/grid.png") repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("img/bg/grid.png") repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;

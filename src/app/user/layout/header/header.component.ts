@@ -4,15 +4,14 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss',
-    '../../anymore/lib/css/nivo-slider.css',
-    '../../anymore/css/core.css',
-    '../../anymore/css/shortcode/header.css',
-    '../../anymore/css/shortcode/footer.css',
-    '../../anymore/css/shortcode/slider.css',
-    '../../anymore/style.css',
-    '../../anymore/css/responsive.css',
-    '../../anymore/css/custom.css',
-    '../../anymore/css/style-customizer.css'
+  '../../../../assets/user-custom/css/core.css',
+  '../../../../assets/user-custom/lib/css/nivo-slider.css',
+  '../../../../assets/user-custom/css/shortcode/shortcodes.css',
+  '../../../../assets/user-custom/css/responsive.css',
+  '../../../../assets/user-custom/style.css',
+  '../../../../assets/user-custom/css/custom.css',
+  '../../../../assets/user-custom/css/style-customizer.css',
+
   ]
 })
 export class HeaderComponent implements OnInit {
