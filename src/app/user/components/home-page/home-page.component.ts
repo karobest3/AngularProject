@@ -8,10 +8,10 @@ import * as $ from 'jquery';
 })
 export class HomePageComponent implements OnInit {
   constructor(private loader: LoaderLibService) {
-
     loader.loadScript('../../../../assets/user-custom/js/popper.min.js');
     loader.loadScript('../../../../assets/user-custom/js/bootstrap.min.js');
     loader.loadScript('../../../../assets/user-custom/lib/js/jquery.nivo.slider.js');
+    // loader.loadScript('../../../../assets/user-custom/js/plugins.js');
     loader.loadScript('../../../../assets/user-custom/js/main.js');
   }
 
