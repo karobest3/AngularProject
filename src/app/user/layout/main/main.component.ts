@@ -1,26 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { LoaderLibService } from 'src/app/service/loader-lib.service';
 
-// import '../../../../../node_modules/jquery/dist/jquery.min.js'
-// import "../../../../assets/user-custom/js/vendor/jquery-3.1.1.min.js";
-// import "../../../../assets/user-custom/js/popper.min.js";
-// import "../../../../assets/user-custom/js/bootstrap.min.js";
-// import "../../../../assets/user-custom/lib/js/jquery.nivo.slider.js";
-// import "../../../../assets/user-custom/js/plugins.js";
-// import "../../../../assets/user-custom/js/main.js";
 
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss',
- 
+
   ]
-  
+
 })
 export class MainComponent implements OnInit {
- 
-  constructor() { }
-  ngOnInit() {
-  }
 
+  constructor(private loader: LoaderLibService) {
+    loader.loadCss("assets/user-custom/css/bootstrap.min.css");
+    loader.loadCss("assets/user-custom/css/shortcode/shortcodes.css");
+    loader.loadCss("assets/user-custom/lib/css/nivo-slider.css");
+    loader.loadCss("assets/user-custom/css/core.css");
+    loader.loadCss("assets/user-custom/style.css");
+    loader.loadCss("assets/user-custom/css/responsive.css");
+    loader.loadCss("assets/user-custom/css/custom.css");
+    loader.loadCss("assets/user-custom/css/style-customizer.css");
+
+  }
+  ngOnInit() {
+   
+  }
 }

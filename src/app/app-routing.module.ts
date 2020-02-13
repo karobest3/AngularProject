@@ -9,10 +9,12 @@ import { MainComponent } from './user/layout/main/main.component';
 
 
 const routes: Routes = [
-  { path: '' , component: MainComponent , children: [
-    {path: '' , component: HomePageComponent},
-    {path: 'products' , component: ProductsComponent}
-  ]}
+  {
+    path: '', component: MainComponent, children: [
+      { path: '', component: HomePageComponent },
+      { path: 'products', component: ProductsComponent }
+    ]
+  }
 ];
 
 @NgModule({

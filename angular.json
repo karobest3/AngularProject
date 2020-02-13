@@ -31,13 +31,13 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "../node_modules/jquery/dist/jquery.min.js",
-              "/src/assets/user-custom/js/vendor/jquery-3.1.1.min.js",
-              "/src/assets/user-custom/js/popper.min.js",
-              "/src/assets/user-custom/js/bootstrap.min.js",
-              "/src/assets/user-custom/lib/js/jquery.nivo.slider.js",
-              "/src/assets/user-custom/js/plugins.js",
-              "/src/assets/user-custom/js/main.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "../Angular-Project/src/assets/user-custom/js/vendor/jquery-3.1.1.min.js",
+              "../Angular-Project/src/assets/user-custom/js/popper.min.js",
+              "../Angular-Project/src/assets/user-custom/js/bootstrap.min.js",
+              "../Angular-Project/src/assets/user-custom/lib/js/jquery.nivo.slider.js",
+              "../Angular-Project/src/assets/user-custom/js/plugins.js",
+              "../Angular-Project/src/assets/user-custom/js/main.js"
             ]
           },
           "configurations": {

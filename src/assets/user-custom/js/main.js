@@ -48,7 +48,7 @@
 	/* ********************************************
 		1. jQuery MeanMenu
 	******************************************** */
-    jQuery('nav#dropdown').meanmenu();
+    // jQuery('nav#dropdown').meanmenu();
 
 	/* ********************************************
 		2. wow js active
@@ -58,17 +58,17 @@
 	/* ********************************************
 		3. jQuery Nivo Slider (home-2)
 	******************************************** */
-    $('#nivoslider-2').nivoSlider({
-        directionNav: true,
-        animSpeed: 1000,
-        effect: 'random',
-        slices: 18,
-        pauseTime: 8000,
-        pauseOnHover: true,
-        controlNav: true,
-        prevText: '<i class="zmdi zmdi-long-arrow-up"></i>',
-        nextText: '<i class="zmdi zmdi-long-arrow-down"></i>'
-    });
+    // $('#nivoslider-2').nivoSlider({
+    //     directionNav: true,
+    //     animSpeed: 1000,
+    //     effect: 'random',
+    //     slices: 18,
+    //     pauseTime: 8000,
+    //     pauseOnHover: true,
+    //     controlNav: true,
+    //     prevText: '<i class="zmdi zmdi-long-arrow-up"></i>',
+    //     nextText: '<i class="zmdi zmdi-long-arrow-down"></i>'
+    // });
     
 	/* ********************************************
 		4. Slick Carousel 

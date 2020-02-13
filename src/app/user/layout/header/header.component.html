@@ -3,7 +3,7 @@
     <![endif]-->
 
 <!-- START HEADER AREA -->
-<header class="header-area header-wrapper">
+<header class="header-area header-wrapper" id="test">
     <!-- header-top-bar -->
     <div class="header-top-bar plr-185">
         <div class="container-fluid">
@@ -48,7 +48,7 @@
                     <!-- logo -->
                     <div class="col-lg-2 col-md-4">
                         <div class="logo">
-                            <a href="index.html">
+                            <a routerLink="">
                                 <img src="assets/user-custom/img/logo/logo.png" alt="main logo">
                             </a>
                         </div>
@@ -57,7 +57,7 @@
                     <div class="col-lg-8 d-none d-lg-block">
                         <nav id="primary-menu">
                             <ul class="main-menu text-center">
-                                <li><a href="index.html">Home</a>
+                                <li><a routerLink="">Home</a>
                                     <ul class="dropdwn">
                                         <li>
                                             <a href="index.html">Home Version 1</a>
@@ -220,7 +220,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="mega-parent"><a href="shop.html">Products</a>
+                                <li class="mega-parent"><a [routerLink]="['/products']">Products</a>
                                     <div class="mega-menu-area clearfix">
                                         <div class="mega-menu-link f-left">
                                             <ul class="single-mega-item">
