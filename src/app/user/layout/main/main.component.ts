@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LoaderLibService } from 'src/app/service/loader-lib.service';
 
 
-
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -25,6 +24,5 @@ export class MainComponent implements OnInit {
 
   }
   ngOnInit() {
-   
   }
 }

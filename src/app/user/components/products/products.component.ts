@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
+  imageList: any[];
+  rowIndexArray: any[];
   constructor() { }
 
   ngOnInit() {
+   
   }
-
 }

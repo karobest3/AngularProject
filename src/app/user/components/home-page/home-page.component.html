@@ -138,7 +138,35 @@
 
 <!-- START SLIDER AREA -->
 <div class="slider-area plr-185 mb-80 section">
+    
     <div class="container-fluid">
+<!-- test FIREBASE -->
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+        <form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+            <div class="text-center">
+                <img [src]="imgSrc" width="350px" height="250px" (click)="fileUploader.click()"/>
+            </div>
+            <div class="form-group">
+                <label>Select File</label>
+                <input type="file" accept="*" class="form-control" #fileUploader formControlName="imageUrl" (change)="showPreview($event)"/>
+           <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This is field required!</div>
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <input type="text" class="form-control" formControlName="category"/>
+            </div>
+            <div class="form-group">
+                <label>Caption</label>
+                <input type="text" class="form-control" formControlName="caption"/>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success float-right"></button>
+            </div>
+        </form>
+    </div>
+</div>
+
         <div class="slider-content">
             <div class="active-slider-1 slick-arrow-1 slick-dots-1">
                 <!-- layer-1 Start -->

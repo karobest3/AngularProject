@@ -1,7 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +17,7 @@ import { HomePageComponent } from './user/components/home-page/home-page.compone
 import { ProductsComponent } from './user/components/products/products.component';
 import { MainComponent } from './user/layout/main/main.component';
 
-
+import { environment } from "../environments/environment";
 
 
 @NgModule({
@@ -32,6 +36,10 @@ import { MainComponent } from './user/layout/main/main.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

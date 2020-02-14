@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-project-firebase-3d307": {
+      "hosting": {
+        "Angular-Project": [
+          "angular-project-firebase-3d307"
+        ]
+      }
+    }
+  }
+}
