@@ -128,7 +128,7 @@
                 Light Version
                 <div class="float-right">
                     <label class="switch">
-                        <input type="checkbox" class="lv-btn">
+                        <input type="checkbox" class="lv-btn" checked>
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -308,7 +308,7 @@
             <div id="navbar-menu">
                 <ul class="nav navbar-nav">
                     <li><a href="javascript:void(0);" class="search_toggle icon-menu" title="Search Result"><i class="icon-magnifier"></i></a></li>
-                    <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-bubbles"></i><span class="notification-dot bg-pink">2</span></a></li>
+                    <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu" (click)="openChat()"><i class="icon-bubbles"></i><span class="notification-dot bg-pink">2</span></a></li>
                     <li><a href="page-login.html" class="icon-menu"><i class="icon-power"></i></a></li>
                 </ul>
             </div>
@@ -524,6 +524,7 @@
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Chat-one">Chat</a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat-list">List</a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat-groups">Groups</a></li>
+            <li class="nav-item" style="cursor: pointer !important;"><a class="nav-link" (click)="closeChat()">Close</a></li>
         </ul>
         <hr>
         <div class="tab-content">

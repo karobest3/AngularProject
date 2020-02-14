@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>AngularProject</title>
@@ -9,7 +10,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="assets/user-custom/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/user-custom/lib/css/nivo-slider.css">
   <link rel="stylesheet" href="assets/user-custom/css/core.css">
@@ -18,18 +20,38 @@
   <link rel="stylesheet" href="assets/user-custom/css/responsive.css">
   <link rel="stylesheet" href="assets/user-custom/css/custom.css">
   <link rel="stylesheet" href="assets/user-custom/css/style-customizer.css"> -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="assets/user-custom/js/plugins.js"></script>
-<script src="assets/admin-custom/html/assets/bundles/vendorscripts.bundle.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- <script src="assets/user-custom/js/plugins.js"></script> -->
 
-<!-- <script src="assets/admin-custom/html/assets/bundles/libscripts.bundle.js"></script>
-<script src="assets/admin-custom/html/assets/bundles/vendorscripts.bundle.js"></script>
-<script src="assets/admin-custom/html/assets/bundles/c3.bundle.js"></script>
-<script src="assets/admin-custom/html/assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/admin-custom/html/assets/js/index.js"></script> -->
+  <script>
+    var path = window.location.href;
+    var pos = path.search("admin");
+    if (pos === -1) {
+      drawScript("assets/user-custom/js/plugins.js");
+    } else {
+
+
+    }
+    function drawScript(src) {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      document.getElementsByTagName("head")[0].appendChild(script);
+      script.src = src;
+    }
+  </script>
+
+
+
+  <script src="assets/admin-custom/html/assets/bundles/libscripts.bundle.js"></script>
+  <script src="assets/admin-custom/html/assets/bundles/vendorscripts.bundle.js"></script>
+  <script src="assets/admin-custom/html/assets/bundles/c3.bundle.js"></script>
+
 
 </head>
-<body>
+
+<body id="bodyIndex">
   <app-root></app-root>
-  </body>
+
+</body>
+
 </html>
