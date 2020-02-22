@@ -18,7 +18,8 @@ import { ProductsComponent } from './user/components/products/products.component
 import { MainComponent } from './user/layout/main/main.component';
 
 import { environment } from "../environments/environment";
-
+import { AdminModule } from "./admin/admin.module";
+import { AdminRouterModule } from "./admin/admin-router.module"
 
 @NgModule({
   declarations: [
@@ -39,8 +40,9 @@ import { environment } from "../environments/environment";
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    AdminModule,
+    // AdminRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

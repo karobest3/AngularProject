@@ -5,7 +5,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from "rxjs/operators";
 import { UploadFirebaseService } from 'src/app/service/upload-firebase.service';
-
+import { HelperDataService } from 'src/app/service/helper-data.service';
+import { Product } from 'src/app/models/product';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -15,6 +17,9 @@ export class HomePageComponent implements OnInit {
   imgSrc: string;
   selectImage: any = null;
   isSubmitted: boolean;
+  product: Product = new Product();
+
+
   // test fire base
   formTemplate = new FormGroup({
     caption: new FormControl('', Validators.required),
@@ -27,7 +32,8 @@ export class HomePageComponent implements OnInit {
 
 
 
-  constructor(private loader: LoaderLibService, private storage: AngularFireStorage, private uploadService : UploadFirebaseService) {
+  constructor(private loader: LoaderLibService, private storage: AngularFireStorage, private uploadService: UploadFirebaseService,
+    private router: Router, private helperService: HelperDataService) {
     loader.loadScript('../../../../assets/user-custom/js/popper.min.js');
     loader.loadScript('../../../../assets/user-custom/js/bootstrap.min.js');
     loader.loadScript('../../../../assets/user-custom/lib/js/jquery.nivo.slider.js');
@@ -48,24 +54,35 @@ export class HomePageComponent implements OnInit {
       reader.readAsDataURL(event.target.files[0]);
       this.selectImage = event.target.files[0];
     } else {
-    
+
       this.imgSrc = 'assets/user-custom/images/logo/logo.png';
       this.selectImage = null;
     }
   }
-  downloadURL:any;
   onSubmit(formValue) {
     this.isSubmitted = true;
     if (this.formTemplate.valid) {
       var filePath = `${formValue.category}/${this.selectImage.name.split('.').
-      slice(0,-1).join('.')}_${new Date().getTime()}`;
+        slice(0, -1).join('.')}_${new Date().getTime()}`;
       const fileRef = this.storage.ref(filePath);
       this.storage.upload(filePath, this.selectImage).snapshotChanges().pipe(
         finalize(() => {
-          fileRef.getDownloadURL().subscribe((url) => { 
-            this.downloadURL = url;  
-            console.log("the URL" +this.downloadURL);
+          fileRef.getDownloadURL().toPromise().then((url) => {
+            // get url in firebase
+            this.product.url = url;
+            console.log("Da get duoc url");
             this.resetForm();
+          }).then(action => {
+            //post data to server 
+            this.product.name ="zxc";
+            this.helperService.createObject(this.product, "products").subscribe(
+              data => {
+                console.log("data đã gửi phía server");
+              },error => {
+                console.log(error.error);
+                this.deleteImageFireBase(this.product.url);
+              }
+            );
           })
         })
       ).subscribe();
@@ -86,5 +103,8 @@ export class HomePageComponent implements OnInit {
     this.imgSrc = 'assets/user-custom/images/logo/logo.png';
     this.selectImage = null;
     this.isSubmitted = false;
+  }
+  deleteImageFireBase(url:string) {
+    return this.storage.storage.refFromURL(url).delete();
   }
 }
